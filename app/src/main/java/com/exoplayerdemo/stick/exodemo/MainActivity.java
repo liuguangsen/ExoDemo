@@ -6,6 +6,8 @@ import android.util.Log;
 
 import com.exoplayerdemo.stick.exodemo.entity.Temple;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -13,16 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Temple temple = new Temple();
+        /*Temple temple = new Temple();
         changeStr1(temple);
-        Log.d("liugs", temple.getName() + "  " + temple.getNums()[0]);
+        Log.d("liugs", temple.getName() + "  " + temple.getNums()[0]);*/
 
-        /*int a = 1;
+        int a = 1;
         String s = "test";
         char[] nums = {'a', 'b'};
         char b = 'b';
-        changeStr(a, s, nums, b);
-        Log.d("liugs", a + "  " + s + "  " + nums[0]+"   "+b);*/
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("array");
+        changeStr(a, s, nums, b,arrayList);
+        Log.d("liugs", a + "  " + s + "  " + nums[0]+"   "+b+"   "+arrayList.size()+"  "+arrayList.get(0));
     }
 
     private void changeStr1(Temple temple) {
@@ -30,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
         temple.setNums(new char[]{'1', '2'});
     }
 
-    public void changeStr(int a, String s, char[] nums, char b) {
+    public void changeStr(int a, String s, char[] nums, char b,ArrayList<String> arrayList) {
         a = 2;
         s = "aaa";
         //nums[0] = '1';
         b = 'c';
+        arrayList.set(0,"arr");
     }
 }
