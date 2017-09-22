@@ -39,6 +39,6 @@ public class MainActivity extends AppCompatActivity {
         s = "aaa";
         //nums[0] = '1';
         b = 'c';
-        arrayList.set(0,"arr");
+        arrayList.set(0,"a");
     }
 }
